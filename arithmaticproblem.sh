@@ -38,4 +38,18 @@ do
    done
 done
 echo -e "\nSorted Numbers in Descending Order:"
-  echo ${array[@]}
+echo ${array[@]}
+for (( i=0; i<3; i++ ))
+do
+   for (( j=i+1; j<4; j++ ))
+   do
+      if [[ ${array[i]} -gt ${array[j]} ]]
+     then
+           t=${array[i]}
+           array[i]=${array[j]}
+           array[j]=$t
+      fi
+   done
+done
+echo -e "\nSorted Numbers in Ascending Order:"
+echo ${array[@]}
