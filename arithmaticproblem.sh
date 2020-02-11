@@ -11,3 +11,7 @@ W=$(($a+$b*$c))
 x=$(($a*$b+$c))
 y=$(($c+$a/$b))
 z=$(($a%$b+$c))
+result[W]=$w
+result[X]=$x
+result[Y]=$y
+result[Z]=$z
