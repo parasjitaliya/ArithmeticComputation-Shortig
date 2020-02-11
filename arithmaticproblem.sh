@@ -16,4 +16,26 @@ result[W]=$w
 result[X]=$x
 result[Y]=$y
 result[Z]=$z
-array=${result[@]}
+count=0
+
+while [[ $count -ne ${#result[@]} ]]
+do
+   array[$count]=${result[$(( count+1 ))]}
+   count=$(( count+1 ))
+done
+echo ${array[@]}
+
+for (( i=0; i<3; i++ ))
+do
+   for (( j=i+1; j<4; j++ ))
+   do
+      if [[ ${array[i]} -lt ${array[j]} ]]
+     then
+           t=${array[i]}
+           array[i]=${array[j]}
+           array[j]=$t
+      fi
+   done
+done
+echo -e "\nSorted Numbers in Descending Order:"
+  echo ${array[@]}
