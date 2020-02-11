@@ -1,5 +1,6 @@
 #!/bin/bash
 echo "----------Welcome to Arithmetic Computation----------"
+declare -A result
 #Take the user input from user
 read -p "Enter First No:" a
 echo value of a is $a
@@ -15,3 +16,4 @@ result[W]=$w
 result[X]=$x
 result[Y]=$y
 result[Z]=$z
+array=${result[@]}
