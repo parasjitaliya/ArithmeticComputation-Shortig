@@ -10,4 +10,4 @@ echo value of c is $c
 W=$(($a+$b*$c)) 
 x=$(($a*$b+$c))
 y=$(($c+$a/$b))
-
+z=$(($a%$b+$c))
