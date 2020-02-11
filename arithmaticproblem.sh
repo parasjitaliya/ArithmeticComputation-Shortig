@@ -7,4 +7,4 @@ read -p "Enter Second No:" b
 echo value of b is $b
 read -p "Enetr Third No:" c
 echo value of c is $c
- 
+C1=$(($a+$b*$c)) 
